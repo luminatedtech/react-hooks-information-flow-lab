@@ -1,9 +1,18 @@
 import React from "react";
 
 
-function Header () {
+function Header ({handleDarkModeClick,isDarkMode}) {
     return (
-        console.log("hello")
+        <div className={"App " + (isDarkMode ? "dark" : "light")}>
+      <header>
+        <h2>Shopster</h2>
+        <button onClick={handleDarkModeClick}>
+          {isDarkMode ? "Dark" : "Light"} Mode
+        </button>
+      </header>
+      
+    </div>
+        
     )
 }
 
